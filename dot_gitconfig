@@ -1,0 +1,63 @@
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	cia = commit --amend --no-edit
+	cm = commit -m
+	cmn = commit -n -m
+	diffc = diff --cached
+	crename = commit --amend -n -m
+	fop = fetch origin --prune
+	s = remote show origin
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+	lga = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
+	unstage = reset HEAD --
+	fixup = commit --fixup
+	ri = rebase -i --autosquash
+	graph = log --graph --oneline --decorate=short
+	del = branch -D
+	save = "! git add -A && git commit -n -m 'chore: commit save point'"
+	todo = "! git grep --extended-regexp -I --line-number --break --heading --color=auto 'TODO|FIXME'"
+	cbd = "! git fop && git co develop && git pull && git co -b"
+	cbm = "! git fop && git co master && git pull && git co -b"
+	# cbd = "! git fop && git co -b $1 origin/develop"
+	# cbm = "! git fop && git co -b $1 origin/master"
+[pager]
+	log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+	# diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+	show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+[user]
+	name = Vincent Hennebert
+	email = couscouss@gmail.com
+[core]
+	autocrlf = input
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	hooksPath = ~/.git/hooks
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[status]
+	showUntrackedFiles = all
+[Push]
+	default = simple
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color]
+	ui = true
+[pull]
+	rebase = false
+[safe]
+	directory = /app

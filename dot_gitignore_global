@@ -1,0 +1,11 @@
+.idea/
+.phan/
+.php_cs.cache
+.php_cs
+.phpunit-watcher.yml
+grumphp.yml
+/rector.php
+/rector.json
+/node_modules
+/vendor
+/coverage
