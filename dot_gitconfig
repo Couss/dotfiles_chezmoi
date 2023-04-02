@@ -9,30 +9,12 @@
 	diffc = diff --cached
 	crename = commit --amend -n -m
 	fop = fetch origin --prune
-	s = remote show origin
-	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
-	lga = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
-	unstage = reset HEAD --
-	fixup = commit --fixup
-	ri = rebase -i --autosquash
-	graph = log --graph --oneline --decorate=short
-	del = branch -D
-	save = "! git add -A && git commit -n -m 'chore: commit save point'"
-	todo = "! git grep --extended-regexp -I --line-number --break --heading --color=auto 'TODO|FIXME'"
-	cbd = "! git fop && git co develop && git pull && git co -b"
-	cbm = "! git fop && git co master && git pull && git co -b"
-	# cbd = "! git fop && git co -b $1 origin/develop"
-	# cbm = "! git fop && git co -b $1 origin/master"
-[pager]
-	log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
-	# diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
-	show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
 [user]
 	name = Vincent Hennebert
 	email = couscouss@gmail.com
 [core]
 	autocrlf = input
-	editor = vim
+	editor = code
 	excludesfile = ~/.gitignore_global
 	hooksPath = ~/.git/hooks
 	pager = diff-so-fancy | less --tabs=4 -RFX
