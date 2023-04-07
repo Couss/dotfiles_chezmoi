@@ -121,6 +121,13 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
 
+FILE=~/.aliases_local
+if [ -f "$FILE" ]; then
+    source $FILE
+else
+    echo "$FILE does not exist, create and source this"
+fi
+
 # Fix numeric keypad
 # 0 . Enter
 bindkey -s "^[Op" "0"
