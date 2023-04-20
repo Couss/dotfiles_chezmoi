@@ -162,4 +162,5 @@ bindkey  "^[[3~"  delete-char
 export PATH="$(composer config -g home)/vendor/bin:$PATH"
 
 # source nvm install
-~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
