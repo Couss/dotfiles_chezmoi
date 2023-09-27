@@ -14,7 +14,7 @@
 	email = couscouss@gmail.com
 [core]
 	autocrlf = input
-	editor = code
+	editor = nano
 	excludesfile = ~/.gitignore_global
 	hooksPath = ~/.git/hooks
 	pager = diff-so-fancy | less --tabs=4 -RFX
