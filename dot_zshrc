@@ -89,6 +89,7 @@ plugins=(
     docker-compose
     sudo
     colored-man-pages
+    git-flow
 )
 
 source $ZSH/oh-my-zsh.sh
