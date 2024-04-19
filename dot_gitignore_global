@@ -9,3 +9,5 @@ grumphp.yml
 /node_modules
 /vendor
 /coverage
+.castor.stub.php
+castor.php
