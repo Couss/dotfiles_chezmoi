@@ -11,3 +11,5 @@ grumphp.yml
 /coverage
 .castor.stub.php
 castor.php
+/tmp_api
+/docker/php/Dockerfile.local
